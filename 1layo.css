@@ -1,0 +1,117 @@
+         <style>
+        body {
+            background-color:b lightskyblue;
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color:lemonchiffon;
+            font-size: 8px;
+            margin-left: 20px;
+        }
+
+        .banner {
+            background-color: coral;
+            color: white;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+
+        .banner h2 {
+            font-size: 16px;
+        }
+
+        .banner p {
+            font-size: 10px;
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            padding: 8px;
+            font-size: 8px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .box {
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .web {
+            background-color: #4b0824;
+            height: 200px;
+            grid-row: span 2;
+        }
+
+        .app {
+            background-color: #242326;
+        }
+
+        .graphic {
+            background-color: #bd8175;
+        }
+
+        .box h3 {
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .box p {
+            font-size: 8px;
+        }
+
+        .why {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+        }
+        
+        .circle {
+            background-color: coral;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: auto;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .features h4 {
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+    </style>

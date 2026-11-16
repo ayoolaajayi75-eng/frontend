@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE Fashion Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: black;
+}
+
+.shipping {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 17px;
+    letter-spacing: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    position: sticky;
+    z-index: 1100;
+    top: 0;
+}
+
+.header {
+    background: white;
+    padding: 15px 4%;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: darkgoldenrod;
+}
+
+.icons {
+    font-size: 25px;
+    display: flex;
+    gap: 28px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+}
+
+.hero {
+    min-height: 850px;
+    background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0,0,0,.15)),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700');
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 45px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #c09a60;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 76px;
+    line-height: 1.12;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 23px;
+    line-height: 1.8;
+    margin-bottom: 55px;
+}
+
+.btn {
+    display: inline-block;
+    background: #b58b50;
+    color: white;
+    padding: 25px 50px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #92703f;
+}
+
+.explore {
+    padding: 100px 4%;
+}
+
+.explore h3 {
+    color: #ae8956;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+}
+
+.explore-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-top a {
+    color: #222;
+    text-decoration: none;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.category img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.category h2 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 15px;
+}
+
+@media(max-width: 600px) {
+    .shipping {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .header {
+        padding: 25px 4%;
+    }
+
+    .logo {
+        font-size: 35px;
+    }
+
+    nav {
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .icons {
+        gap: 12px;
+        font-size: 20px;
+    }
+
+    .hero {
+        min-height: 750px;
+        padding: 30px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .btn {
+        padding: 20px 30px;
+        font-size: 12px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="shipping">
+FREE SHIPPING ON ORDERS ABOVE ₦100,000
+</div>
+
+<header class="header">
+
+    <div class="top">
+        <div class="logo">LUXE<span>.</span></div>
+
+        <div class="icons">
+            <span>⌕</span>
+            <span>♙</span>
+            <span>♧</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Categories</a>
+        <a href="#">About</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="subtitle">
+            NEW COLLECTION 2026
+        </div>
+
+        <h1>
+            Style that speaks for you.
+        </h1>
+
+        <p>
+            Discover timeless fashion pieces designed to
+            make every moment unforgettable.
+        </p>
+
+        <a href="#" class="btn">
+            SHOP COLLECTION →
+        </a>
+
+    </div>
+
+</section>
+
+<section class="explore">
+
+    <div class="explore-top">
+        <h3>EXPLORE OUR STORE</h3>
+        <a href="#">View All →</a>
+    </div>
+
+    <div class="categories">
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700" alt="Women's fashion">
+            <h2>New Arrivals</h2>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=700" alt="Fashion collection">
+            <h2>Collections</h2>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700" alt="Fashion outfits">
+            <h2>Best Sellers</h2>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

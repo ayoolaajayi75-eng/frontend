@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WEBSITE</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+            background-color: black;
+    
+        }
+        h2{
+            color: white;
+            font-size: 2rem;
+        }
+        nav{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .link{
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            justify-content: center;
+        }
+        .ink{
+            color: black;
+            text-decoration: none;
+            border: 1px solid black;
+            height: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        aside{
+            background-color: aliceblue;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 0px 5px;
+            height: 80vh;
+            width: 220px;
+            border-style: hidden;
+            margin-top: 5px;
+            box-shadow: 8px 10px 10px;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+            width: 98%;
+            margin-bottom: 0px;
+            
+        }
+        aside h2{
+            color: black;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            display:flex;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>My website</h2>
+        <nav>
+            <a href="home">Home</a>
+            <a href="about">About</a>
+            <a href="service">Service</a>
+            <a href="Contect">Contect</a>
+        </nav>
+    </header><br>
+    <div class="container">
+        <aside>
+        <h2>Navigation</h2>
+        <a href="Dashboard" class="ink">Dashboard</a>
+        <a href="profile" class="ink">profile</a>
+        <a href="settings" class="ink">settings</a>
+        <a href="model" class="ink">model</a>
+        <a href="transaction" class="ink">transaction</a>
+        <a href="payment" class="ink">payment</a>
+    </aside>
+     <header class="box">
+            <p> &copy; 2026 My Simple Website</p>
+        </header>
+
+    </div>
+</body>
+</html>

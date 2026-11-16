@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER REGISTRATION</title>
+
+    <style>
+            body{
+                font-family: 'Times New Roman';
+                margin: 0;
+                padding: 14px 3%;
+            }
+            .boxes{
+                display: flex;
+                gap: 24PX;
+                margin-bottom: 20PX;
+            }
+            .box{
+                width: 48%;
+                height: 100px;
+                padding: 20px;
+                background-color: rgb(238,247,253);
+                border-radius: 12px;
+                box-sizing: border-box;
+            }
+            .box2{
+                margin-top: 16px;
+       }     
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 10px;
+            }
+            th{
+                background-color: lightblue;
+                text-align: center;
+                padding: 10px;
+            }
+            td{
+                border: 1px solid rgb(108, 139, 230);
+                padding: 10px;
+            }
+            tr:hover{
+                background-color: black;
+                color: white;
+            }
+            input{
+                display: block;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+            button{
+                background-color: green;
+                color: white;border-radius: 5px;
+                cursor: pointer;
+            }
+            @media(max-width: 600px){.box
+                    flex-direction: column;
+            }
+            .box{
+                width: 100%;
+            }
+            table{
+                font-size: 12px;
+            }
+    </style>
+    </head>
+
+<body>
+          <div class="boxes">
+            <div class="box">
+                <h2>Left Box</h2>
+                <p>Content for left box goes here</p>
+        </div>
+        <div class="box">
+            <h2>Right Box</h2>
+            <p>content for right box goes here</p>
+        </div>
+        </div>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>status</th>
+        </tr>
+        <tr>
+             <td>1</td>
+             <td>John</td>
+             <td>john@example.com</td>
+             <td>Active</td>
+        </tr>
+        <tr>
+             <td>2</td>
+             <td>Fayo</td>
+             <td>fayo@example.com</td>
+             <td>inactive</td>
+        </tr>
+        <tr>
+             <td>3</td>
+             <td>Bob Johnson</td>
+             <td>bob@example.com</td>
+             <td>active</td>
+        </tr>
+    </table>
+    <h2>Register User</h2>
+    <form>
+            <input type="text" placeholder="User Nmae" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="submit" placeholder="Submit" required><br>
+    </form>
+    
+</body>
+</html>
