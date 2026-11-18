@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE STORE | Premium Fashion</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #222;
+}
+
+.shipping {
+    background: #171717;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+header {
+    padding: 30px 6%;
+    position: sticky;
+    z-index: 1000; 
+    background: white;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #b58b50;
+}
+
+.icons {
+    display: flex;
+    gap: 25px;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b58b50;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.7), rgba(0,0,0,.1)),
+    url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 7%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #c29a62;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 75px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background: #b58b50;
+    color: white;
+    text-decoration: none;
+    padding: 20px 35px;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #8f6a39;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 85px 6%;
+}
+
+.section-label {
+    color: #b58b50;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-all {
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* CATEGORIES */
+
+.categories {
+    background: #faf9f6;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category {
+    position: relative;
+    overflow: hidden;
+}
+
+.category img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.category:hover img {
+    transform: scale(1.06);
+}
+
+.category h3 {
+    text-align: center;
+    padding: 20px 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    background: white;
+}
+
+/* PRODUCTS */
+
+.products {
+    background: white;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    position: relative;
+    background: #faf9f6;
+    padding-bottom: 25px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #b58b50;
+    color: white;
+    padding: 8px 12px;
+    font-size: 11px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.product-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 13px;
+    margin-left: 7px;
+}
+
+.cart-btn {
+    width: 100%;
+    padding: 13px;
+    background: #171717;
+    color: white;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 11px;
+    transition: .3s;
+}
+
+.cart-btn:hover {
+    background: #b58b50;
+}
+
+/* OFFER */
+
+.offer {
+    background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600');
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.offer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.offer p {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    background: #f7f5f0;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 20px 0;
+}
+
+.newsletter p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+    max-width: 550px;
+    margin: auto;
+}
+
+.subscribe input {
+    flex: 1;
+    min-width: 0;
+    padding: 17px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.subscribe button {
+    background: #171717;
+    color: white;
+    padding: 17px 25px;
+    border: none;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background: #171717;
+    color: white;
+    padding: 65px 6% 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    color: #b58b50;
+}
+
+footer p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 13px;
+}
+
+footer h4 {
+    margin-bottom: 22px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+footer a:hover {
+    color: #b58b50;
+}
+
+.copyright {
+    border-top: 1px solid #444;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .shipping {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    header {
+        padding: 22px 5%;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 17px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .category-grid,
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .category img {
+        height: 180px;
+    }
+
+    .product-card img {
+        height: 190px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 15px;
+    }
+
+    .offer h2 {
+        font-size: 38px;
+    }
+
+    .newsletter h2 {
+        font-size: 29px;
+    }
+
+    .subscribe button {
+        padding: 15px;
+        font-size: 11px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SHIPPING BAR -->
+<div class="shipping">
+    FREE SHIPPING ON ORDERS ABOVE ₦100,000
+</div>
+
+<!-- HEADER -->
+<header>
+
+    <div class="top">
+        <div class="logo">LUXE<span>.</span></div>
+
+        <div class="icons">
+            <span>⌕</span>
+            <span>♙</span>
+            <span>♧ <small id="cart-count">0</small></span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#footer">About</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="subtitle">NEW COLLECTION 2026</div>
+
+        <h1>Style that speaks for you.</h1>
+
+        <p>
+            Discover timeless fashion pieces designed
+            to make every moment unforgettable.
+        </p>
+
+        <a href="#products" class="btn">
+            SHOP COLLECTION →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+
+    <div class="section-top">
+        <div>
+            <div class="section-label">EXPLORE OUR STORE</div>
+            <h2 class="section-title">Shop by Category</h2>
+        </div>
+
+        <a href="#products" class="view-all">View All →</a>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Women's fashion">
+            <h3>Women's Fashion</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600" alt="Men's fashion">
+            <h3>Men's Fashion</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Footwear">
+            <h3>Footwear</h3>
+        </div>
+
+        <div class="category">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600" alt="Accessories">
+            <h3>Accessories</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="products" id="products">
+
+    <div class="section-top">
+        <div>
+            <div class="section-label">HANDPICKED FOR YOU</div>
+            <h2 class="section-title">Featured Products</h2>
+        </div>
+
+        <a href="#products" class="view-all">View All Products →</a>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+
+            <span class="tag">-20%</span>
+
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600" alt="Classic jacket">
+
+            <div class="product-info">
+
+                <div class="product-category">MEN'S CLOTHING</div>
+
+                <h3>Classic Casual Jacket</h3>
+
+                <div class="price">
+                    ₦85,000
+                    <span class="old-price">₦105,000</span>
+                </div>
+
+                <button class="cart-btn" onclick="addToCart()">
+                    ADD TO CART
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+
+            <span class="tag">NEW</span>
+
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600" alt="Women's dress">
+
+            <div class="product-info">
+
+                <div class="product-category">WOMEN'S CLOTHING</div>
+
+                <h3>Elegant Summer Dress</h3>
+
+                <div class="price">₦65,000</div>
+
+                <button class="cart-btn" onclick="addToCart()">
+                    ADD TO CART
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Sneakers">
+
+            <div class="product-info">
+
+                <div class="product-category">FOOTWEAR</div>
+
+                <h3>Premium Sport Sneakers</h3>
+
+                <div class="price">₦95,000</div>
+
+                <button class="cart-btn" onclick="addToCart()">
+                    ADD TO CART
+                </button>
+
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+
+            <span class="tag">-15%</span>
+
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600" alt="Leather handbag">
+
+            <div class="product-info">
+
+                <div class="product-category">ACCESSORIES</div>
+
+                <h3>Luxury Leather Handbag</h3>
+
+                <div class="price">
+                    ₦120,000
+                    <span class="old-price">₦140,000</span>
+                </div>
+
+                <button class="cart-btn" onclick="addToCart()">
+                    ADD TO CART
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIMITED OFFER -->
+<section class="offer">
+
+    <div class="section-label">LIMITED TIME OFFER</div>
+
+    <h2>Upgrade Your Style.<br>Save More.</h2>
+
+    <p>Enjoy up to 30% off selected collections.</p>
+
+    <a href="#products" class="btn">
+        EXPLORE DEALS →
+    </a>
+
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+
+    <div class="section-label">STAY IN THE LOOP</div>
+
+    <h2>Get 10% Off Your First Order</h2>
+
+    <p>
+        Subscribe to receive exclusive offers and new arrivals.
+    </p>
+
+    <form class="subscribe" onsubmit="subscribeUser(event)">
+
+        <input type="email" placeholder="Enter your email address" required>
+
+        <button type="submit">SUBSCRIBE</button>
+
+    </form>
+
+    <p id="message" style="margin-top:20px;"></p>
+
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+
+    <div class="footer-grid">
+
+        <div>
+            <div class="footer-logo">LUXE<span>.</span></div>
+
+            <p>
+                Fashion that defines your individuality.
+                Discover timeless styles and premium
+                fashion collections at LUXE STORE.
+            </p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Shop</a></li>
+                <li><a href="#categories">Categories</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Customer Service</h4>
+
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Returns & Refunds</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>© 2026 LUXE STORE. All rights reserved.</p>
+    </div>
+
+</footer>
+
+<script>
+
+let cart = 0;
+
+function addToCart() {
+    cart++;
+
+    document.getElementById("cart-count").innerText = cart;
+
+    alert("Product added to cart!");
+}
+
+function subscribeUser(event) {
+    event.preventDefault();
+
+    document.getElementById("message").innerText =
+    "Thank you for subscribing to LUXE STORE!";
+
+    event.target.reset();
+}
+
+</script>
+
+</body>
+</html>
